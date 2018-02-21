@@ -1,25 +1,24 @@
-function Thermostat(temperature = 20, mode = "save") {
+function Thermostat(temperature = 20, mode = "save", currentMax = 25) {
   this.temperature = temperature;
   this.mode = mode;
+  this.currentMax = currentMax;
 };
 
 Thermostat.prototype.changeMode = function() {
-  this.mode = "normal";
+  if (this.mode === "normal") {
+    this.mode = "save";
+    this.currentMax = 25;
+  } else {
+    this.mode = "normal";
+    this.currentMax = 32;
+  }
 }
 
 Thermostat.prototype.increase = function(number) {
-  if (this.mode === 'save') {
-    if (this.temperature + number > 25) {
-      this.temperature = 25;
-    } else {
-      this.temperature += number;
-    }
+  if (this.temperature + number > this.currentMax) {
+    this.temperature = this.currentMax;
   } else {
-    if (this.temperature + number > 32) {
-      this.temperature = 32;
-    } else {
-      this.temperature += number;
-    }
+    this.temperature += number;
   }
 }
 
