@@ -1,3 +1,5 @@
+'use strict';
+
 function Thermostat(temperature = 20, mode = "save", currentMax = 25) {
   this.temperature = temperature;
   this.mode = mode;
