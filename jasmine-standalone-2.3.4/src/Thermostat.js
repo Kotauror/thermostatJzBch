@@ -18,7 +18,7 @@ Thermostat.prototype.increase = function(number) {
   if (this.temperature + number > this.currentMax) {
     this.temperature = this.currentMax;
   } else {
-    this.temperature += number;
+    this.temperature += number; 
   }
 }
 
