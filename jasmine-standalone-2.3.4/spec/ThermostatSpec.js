@@ -33,4 +33,16 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(10);
   })
 
+  it("temperature can not be more than 25 deg on save mode", function () {
+    thermostat.increase(10);
+    expect(thermostat.temperature).toEqual(25);
+  })
+
+  it("temperature can not be more than 32 deg on normal mode", function () {
+    thermostat.changeMode();
+    thermostat.increase(20);
+    expect(thermostat.temperature).toEqual(32);
+  })
+
+
 })

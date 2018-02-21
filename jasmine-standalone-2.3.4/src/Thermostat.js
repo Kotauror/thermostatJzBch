@@ -8,7 +8,19 @@ Thermostat.prototype.changeMode = function() {
 }
 
 Thermostat.prototype.increase = function(number) {
-  this.temperature += number;
+  if (this.mode === 'save') {
+    if (this.temperature + number > 25) {
+      this.temperature = 25;
+    } else {
+      this.temperature += number;
+    }
+  } else {
+    if (this.temperature + number > 32) {
+      this.temperature = 32;
+    } else {
+      this.temperature += number;
+    }
+  }
 }
 
 Thermostat.prototype.decrease = function(number) {
