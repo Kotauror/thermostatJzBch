@@ -30,3 +30,4 @@ Thermostat.prototype.decrease = function(number) {
     this.temperature -= number;
   }
 }
+thermostat
