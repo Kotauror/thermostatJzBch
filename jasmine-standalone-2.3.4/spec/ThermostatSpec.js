@@ -33,16 +33,36 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(10);
   })
 
-  it("temperature can not be more than 25 deg on save mode", function () {
+  it("temperature can not be more than 25 deg on save mode", function() {
     thermostat.increase(10);
     expect(thermostat.temperature).toEqual(25);
   })
 
-  it("temperature can not be more than 32 deg on normal mode", function () {
+  it("temperature can not be more than 32 deg on normal mode", function() {
     thermostat.changeMode();
     thermostat.increase(20);
     expect(thermostat.temperature).toEqual(32);
   })
+
+  it("reset temperature to 20", function() {
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
+  })
+
+  describe("usage", function() {
+    it("tells the usage is medium", function() {
+      expect(thermostat.usage()).toEqual("medium-usage");
+    })
+    it("tells the usage is low", function() {
+      thermostat.decrease(3);
+      expect(thermostat.usage()).toEqual("low-usage");
+    })
+    it("tells the usage is high", function() {
+      thermostat.increase(6);
+      expect(thermostat.usage()).toEqual("high-usage");
+    })
+  })
+
 
 
 })
