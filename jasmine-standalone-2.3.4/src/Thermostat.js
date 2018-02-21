@@ -1,6 +1,6 @@
 'use strict';
 
-function Thermostat(temperature = 20, mode = "save", currentMax = 25) {
+function Thermostat(temperature = 20, mode = "saving power", currentMax = 25) {
   this.temperature = temperature;
   this.mode = mode;
   this.currentMax = currentMax;
@@ -8,7 +8,7 @@ function Thermostat(temperature = 20, mode = "save", currentMax = 25) {
 
 Thermostat.prototype.changeMode = function() {
   if (this.mode === "normal") {
-    this.mode = "save";
+    this.mode = "saving power";
     this.currentMax = 25;
   } else {
     this.mode = "normal";

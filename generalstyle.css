@@ -1,5 +1,14 @@
+#welcome {
+  margin-top: 2em;
+  font-family: Work Sans;
+  font-size: 3em;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+
 .things {
-  margin-top: 10em;
+  margin-top: 3em;
   width: 60%;
   margin-left: 20%;
   display: grid;
@@ -14,17 +23,58 @@
   background-color: #dcdada87;
 }
 
-.logo {
+#number {
+  margin-top: 1em;
+  font-size: 2em;
+  letter-spacing: 0.3em;
+}
+
+#logo {
   background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/827695-200.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-.increase {
+#increase {
   background-color: #e45f5fad;
 }
 
-.decrease {
+#decrease {
   background-color: #8db1eaad;
+}
+
+#mode {
+  background-color: #bbb3b3c2;
+  font-family: Work Sans;
+  margin-top: 1em;
+}
+
+#usageinfo {
+  background-color: #bbb3b3c2;
+  font-family: Work Sans;
+  margin-top: 1em;
+}
+
+p1 {
+  font-family: Work Sans;
+  font-size: 1.1em;
+  margin-top: 0.5em !important;
+}
+
+#usage_color {
+  margin-top: 1em;
+  height: 2em;
+}
+
+.low-usage {
+  background-color: green;
+}
+
+.medium-usage {
+  background-color: black;
+}
+
+.high-usage {
+  background-color: red;
 }

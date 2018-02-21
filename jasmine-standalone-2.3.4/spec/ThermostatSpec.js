@@ -12,7 +12,7 @@ describe("Thermostat", function() {
   })
 
   it("it has a mode var that defaults to save", function() {
-    expect(thermostat.mode).toEqual("save");
+    expect(thermostat.mode).toEqual("saving power");
   })
 
   it("it can change a mode", function() {

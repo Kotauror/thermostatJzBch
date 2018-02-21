@@ -4,47 +4,67 @@
 <head>
   <!-- include source files here... -->
   <link rel="stylesheet" type="text/css" href="./generalstyle.css">
-
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="jasmine-standalone-2.3.4/src/Thermostat.js"></script>
-
+  <script src="jasmine-standalone-2.3.4/src/interface.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 
 </head>
 
 <body>
+  <div id="welcome"> Thermostat </div>
   <div class="things">
 
-    <div class="onething logo">
+    <div class="onething" id="logo">
     </div>
-    <div class="onething increase">
-      Increase your temperature by:
+
+    <div class="onething" id="increase">
+      <p1> Increase your temperature by: </p1>
+      <form id="increase_form">
+        <input type="text" name="input" placeholder="number"> <br>
+        <input type="submit" value="submit" class="main_page_input">
+      </form>
+    </div>
+
+    <div class="onething" id="current_mode">
+      <p1> Current mode: </p1>
+      <div id="mode">
+      </div>
+    </div>
+
+    <div class="onething">
+    </div>
+
+    <div class="onething" id="temperature">
+      <p1>  Current temperature:</p1>
+      <div id="number">
+      </div>
+    </div>
+
+    <div class="onething" id="usage">
+        <p1> Usage:</p1>
+        <div id="usageinfo">
+        </div>
+        <div id="usage_color">
+        </div>
+    </div>
+
+    <div class="onething">
+      <p1> Reset temperature to 20 degrees </p1><br>
+      <button id="reset_button"> Reset </button>
+    </div>
+
+    <div class="onething" id="decrease">
+      <p1>  Decrease your temperature by:</p1>
       <form>
         <input type="text" name="number" placeholder="number"> <br>
         <input type="submit" value="Submit" class="main_page_input">
       </form>
-    </div>
-    <div class="onething">
-      <button> Switch mode </button>
-    </div>
-    <div class="onething">
+   </div>
 
-    </div>
-    <div class="onething">
-      number
-    </div>
-    <div class="onething">
-      
-    </div>
-    <div class="onething">
-      <button> reset to 20 deg. </button>
-    </div>
-    <div class="onething decrease">
-      Decrease your temperature by:
-      <form>
-        <input type="text" name="number" placeholder="number"> <br>
-        <input type="submit" value="Submit" class="main_page_input">
-      </form>    </div>
-    <div class="onething">
-      usage
+    <div class="onething" id="switch">
+      <p1> Switch mode </p1><br>
+      <button id="switch_button"> Switch </button>
     </div>
 
   </div>
