@@ -1,3 +1,8 @@
+window.onload = function() {
+
+};
+
+
 $( document ).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
@@ -13,7 +18,7 @@ $( document ).ready(function() {
   $('#switch').click(function(e) {
   thermostat.changeMode();
   updateMode();
-  });
+    });
 
   $('#reset').click(function() {
   thermostat.reset();
@@ -22,9 +27,9 @@ $( document ).ready(function() {
   });
 
   $('.increase_form').submit(function(e) {
-    console.log(e)
     e.preventDefault();
-    thermostat.increase(parseInt(e.target.temperature.value))
+    var value = $( ".input_form" ).val();
+    thermostat.increase(parseInt(value))
     updateTemperature()
     updateMode();
     updateUsage();
@@ -52,6 +57,5 @@ $( document ).ready(function() {
   function updateUsage() {
     $('#usageinfo').text(thermostat.usage());
   }
-
 
 })

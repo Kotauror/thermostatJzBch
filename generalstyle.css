@@ -1,3 +1,4 @@
+
 #welcome {
   margin-top: 2em;
   font-family: Work Sans;
@@ -136,4 +137,33 @@ p1 {
 
 .high-usage {
   background-color: red;
+}
+
+footer {
+  text-align: center;
+  background-color: #b1caf1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;
+  overflow:hidden;
+  margin-bottom: 0.2em;
+}
+
+footer img {
+  height: 2em;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
