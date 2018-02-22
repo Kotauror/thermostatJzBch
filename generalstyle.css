@@ -12,7 +12,7 @@
   width: 50%;
   margin-left: 25%;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 0.7fr 3fr 0.7fr;
   grid-row-gap: 0.3em;
   grid-column-gap: 0.3em;
 }
@@ -28,10 +28,8 @@
   margin-bottom: 0.5em;
 }
 
-#number {
-  margin-top: 0.5em;
-  font-size: 2em;
-  letter-spacing: 0.3em;
+.input_form {
+  width: 2em;
 }
 
 #logo {
@@ -49,6 +47,12 @@
   background-color: #8db1eaad;
 }
 
+#number {
+  margin-top: 0.5em;
+  font-size: 2em;
+  letter-spacing: 0.3em;
+}
+
 #mode {
   background-color: #bbb3b3c2;
   font-family: Work Sans;
@@ -61,15 +65,15 @@
   margin-top: 1em;
 }
 
+#usage_color {
+  margin-top: 1em;
+  height: 2em;
+}
+
 p1 {
   font-family: Work Sans;
   font-size: 1em;
   margin-top: 3em !important;
-}
-
-#usage_color {
-  margin-top: 1em;
-  height: 2em;
 }
 
 .low-usage {
