@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
   $('#usageinfo').text(thermostat.usage());
 
-   $('#switch_button').click(function() {
+  $('#switch_button').click(function() {
   thermostat.changeMode();
   updateMode();
   });
@@ -22,9 +22,17 @@ $( document ).ready(function() {
   });
 
   $('#increase_form').submit(function() {
-    var $inputs = $('#increase_form :input');
-    thermostat.increase($inputs);
+    var input = $(this).serialize();
+    console.log(input);
+    thermostat.increase(input);
+    updateTemperature();
   });
+
+  $( "#target" ).submit(function( event ) {
+    alert( "Handler for .submit() called." );
+    event.preventDefault();
+  });
+
 
   function updateTemperature() {
     $('#number').text(thermostat.temperature);

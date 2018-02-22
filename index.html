@@ -13,21 +13,26 @@
 
 <body>
   <div id="welcome"> Thermostat </div>
+
   <div class="things">
 
     <div class="onething" id="logo">
     </div>
 
     <div class="onething" id="increase">
-      <div class="description"><p1> Increase your temperature by: </p1> </div>
-      <form id="increase_form">
+      <div class="description">
+        <p1> Increase your temperature by: </p1>
+      </div>
+      <form id="increase_form" action="index.html">
         <input type="text" name="input" placeholder="num" class="input_form"> <br>
         <input type="submit" value="submit" class="main_page_input">
       </form>
     </div>
 
     <div class="onething" id="current_mode">
-      <div class="description"><p1> Current mode: </p1> </div>
+      <div class="description">
+        <p1> Current mode: </p1>
+      </div>
       <div id="mode">
       </div>
     </div>
@@ -36,34 +41,42 @@
     </div>
 
     <div class="onething" id="temperature">
-    <div class="description">  <p1>  Current temperature:</p1> </div>
+      <div class="description">
+        <p1> Current temperature:</p1>
+      </div>
       <div id="number">
       </div>
     </div>
 
     <div class="onething" id="usage">
-    <div class="description">      <p1> Usage:</p1>    </div>
-        <div id="usageinfo">
-        </div>
-        <div id="usage_color">
-        </div>
+      <div class="description">
+        <p1> Usage:</p1>
+      </div>
+      <div id="usageinfo">
+      </div>
+      <div id="usage_color">
+      </div>
     </div>
 
     <div class="onething">
-      <div class="description"><p1> Reset </p1><br> </div>
+      <div class="description">
+        <p1> Reset </p1><br> </div>
       <button id="reset_button"> Reset </button>
     </div>
 
     <div class="onething" id="decrease">
-      <div class="description"><p1>  Decrease your temperature by:</p1>  </div>
+      <div class="description">
+        <p1> Decrease your temperature by:</p1>
+      </div>
       <form>
         <input type="text" name="number" placeholder="num" class="input_form"> <br>
         <input type="submit" value="Submit" class="main_page_input">
       </form>
-   </div>
+    </div>
 
     <div class="onething" id="switch">
-    <div class="description">  <p1> Switch mode </p1><br>  </div>
+      <div class="description">
+        <p1> Switch mode </p1><br> </div>
       <button id="switch_button"> Switch </button>
     </div>
 
