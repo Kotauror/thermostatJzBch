@@ -12,8 +12,7 @@ $( document ).ready(function() {
 
   $('#usageinfo').text(thermostat.usage());
 
-
-  $('#switch_button').click(function() {
+   $('#switch_button').click(function() {
   thermostat.changeMode();
   updateMode();
   });

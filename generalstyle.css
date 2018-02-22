@@ -9,8 +9,8 @@
 
 .things {
   margin-top: 3em;
-  width: 60%;
-  margin-left: 20%;
+  width: 50%;
+  margin-left: 25%;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-row-gap: 0.3em;
@@ -63,7 +63,7 @@
 
 p1 {
   font-family: Work Sans;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-top: 3em !important;
 }
 
