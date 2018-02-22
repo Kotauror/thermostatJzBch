@@ -2,6 +2,7 @@ $( document ).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
   updateMode();
+  updateUsage();
 
   $('#number').text(thermostat.temperature);
 
@@ -25,6 +26,8 @@ $( document ).ready(function() {
     e.preventDefault();
     thermostat.increase(parseInt(e.target.temperature.value))
     updateTemperature()
+    updateMode();
+    updateUsage();
     thermostat.maxTemperatureAlert()
   })
 
@@ -32,6 +35,8 @@ $( document ).ready(function() {
     e.preventDefault();
     thermostat.decrease(parseInt(e.target.temperature.value))
     updateTemperature()
+    updateMode();
+    updateUsage();
     thermostat.minTemperatureAlert()
   })
 
@@ -42,6 +47,10 @@ $( document ).ready(function() {
 
   function updateMode() {
     $('#mode').text(thermostat.mode);
+  }
+
+  function updateUsage() {
+    $('#usageinfo').text(thermostat.usage());
   }
 
 
