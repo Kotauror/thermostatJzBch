@@ -1,10 +1,7 @@
-debugger;
-
 $( document ).ready(function() {
-  var thermostat = new Thermostat;
+  var thermostat = new Thermostat();
   updateTemperature();
   updateMode();
-
 
   $('#number').text(thermostat.temperature);
 
@@ -22,10 +19,10 @@ $( document ).ready(function() {
   });
 
   $('#increase_form').submit(function() {
-    var input = $(this).serialize();
+    var input = $("input").val();
     console.log(input);
     thermostat.increase(input);
-    updateTemperature();
+    $('#number').text(thermostat.temperature);
   });
 
   $( "#target" ).submit(function( event ) {
@@ -42,8 +39,6 @@ $( document ).ready(function() {
   function updateMode() {
     $('#mode').text(thermostat.mode);
   }
-
-
 
 
 })
