@@ -58,6 +58,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transition: all .4s ease-in-out;
+}
+
+#increase:hover {
+  transform: scale(0.9);
 }
 
 #decrease {
@@ -66,6 +71,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transition: all .4s ease-in-out;
+}
+
+#decrease:hover {
+  transform: scale(0.9);
 }
 
 #number {
@@ -102,9 +112,8 @@
 }
 
 #reset:hover{
-  transform: scale(1.1);
-  background-color: #eaca1f;
-  box-shadow: 0px 0px 30px grey;
+  transform: scale(0.9);
+  box-shadow: 0px 0px 10px grey;
 }
 
 #switch {
@@ -116,9 +125,8 @@
 }
 
 #switch:hover{
-  transform: scale(1.1);
-  background-color: #eaca1f;
-  box-shadow: 0px 0px 30px grey;
+  transform: scale(0.9);
+  box-shadow: 0px 0px 10px grey;
 }
 
 p1 {

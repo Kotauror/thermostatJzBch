@@ -45,6 +45,10 @@ $( document ).ready(function() {
     thermostat.minTemperatureAlert()
   })
 
+  $("a").click(function () {
+        $("footer").fadeOut("slow");
+    });
+
   function updateTemperature() {
     $('#number').text(thermostat.temperature);
     $('#temperature').attr('class', thermostat.usage());
