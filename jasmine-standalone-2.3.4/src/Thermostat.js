@@ -45,3 +45,15 @@ Thermostat.prototype.usage = function() {
     return "medium-usage";
   }
 }
+
+Thermostat.prototype.maxTemperatureAlert = function() {
+  if(this.temperature === this.currentMax) {
+    alert("Maximum temperature reached")
+  }
+}
+
+Thermostat.prototype.minTemperatureAlert = function() {
+  if(this.temperature === 10) {
+    alert("Minimum temperature reached")
+  }
+}

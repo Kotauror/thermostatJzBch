@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
   $('#usageinfo').text(thermostat.usage());
 
-  $('#switch_button').click(function() {
+  $('#switch_button').click(function(e) {
   thermostat.changeMode();
   updateMode();
   });
@@ -21,11 +21,10 @@ $( document ).ready(function() {
   });
 
   $('.increase_form').submit(function(e) {
-    // console.log(e)
-    e.preventDefault();
     // console.log(e.target.input.value)
     thermostat.increase(parseInt(e.target.input.value))
     updateTemperature()
+    thermostat.maxTemperatureAlert()
   })
 
   $('.decrease_form').submit(function(e) {
@@ -34,6 +33,7 @@ $( document ).ready(function() {
     // console.log(e.target.input.value)
     thermostat.decrease(parseInt(e.target.input.value))
     updateTemperature()
+    thermostat.minTemperatureAlert()
   })
 
   $( "#target" ).submit(function( event ) {

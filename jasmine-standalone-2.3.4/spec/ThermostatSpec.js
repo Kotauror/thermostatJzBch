@@ -5,6 +5,7 @@ describe("Thermostat", function() {
 
   beforeEach(function() {
     thermostat = new Thermostat();
+    spyOn(window, 'alert');
   })
 
   it("it has temperature var that defaults to 20 deg.", function() {
@@ -60,11 +61,26 @@ describe("Thermostat", function() {
       expect(thermostat.usage()).toEqual("low-usage");
     })
     it("tells the usage is high", function() {
-      thermostat.increase(6);
+      thermostat.changeMode();
+      thermostat.increase(30);
       expect(thermostat.usage()).toEqual("high-usage");
     })
   })
 
+  describe("maxTemperatureAlert", function() {
+    it("alerts when maximum temperature reached", function(){
+      thermostat.increase(50)
+      thermostat.maxTemperatureAlert()
+      expect(window.alert).toHaveBeenCalledWith("Maximum temperature reached")
+    })
+  })
 
+  describe("minTemperatureAlert", function() {
+    it("alerts when minimum temperature reached", function() {
+      thermostat.decrease(50)
+      thermostat.minTemperatureAlert()
+      expect(window.alert).toHaveBeenCalledWith("Minimum temperature reached")
+    })
+  })
 
 })
