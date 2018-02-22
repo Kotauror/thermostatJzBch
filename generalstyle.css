@@ -9,10 +9,10 @@
 
 .things {
   margin-top: 3em;
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: 30%;
   display: grid;
-  grid-template-columns: 0.7fr 3fr 0.7fr;
+  grid-template-columns: 0.7fr 2fr 0.7fr;
   grid-row-gap: 0.3em;
   grid-column-gap: 0.3em;
 }
@@ -26,31 +26,41 @@
 .description {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .input_form {
   width: 2em;
 }
 
-#logo {
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/827695-200.png");
+.increase_form {
+  margin-top: 4em;
+}
+
+#increase {
+  background-color: #e45f5fad;
+  background-image: url("https://png.icons8.com/ios/1600/collapse-arrow.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-#increase {
-  background-color: #e45f5fad;
-}
-
 #decrease {
   background-color: #8db1eaad;
+  background-image: url("https://png.icons8.com/ios/1600/expand-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 #number {
   margin-top: 0.5em;
   font-size: 2em;
   letter-spacing: 0.3em;
+  text-align: center;
+  background-color: #edebeb !important;
+  width: 20%;
+  margin-left: 40%;
 }
 
 #mode {
@@ -70,6 +80,34 @@
   height: 2em;
 }
 
+#reset {
+  background-image: url("http://www.iconarchive.com/download/i7902/hopstarter/soft-scraps/Button-Blank-Gray.ico");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  transition: all .4s ease-in-out;
+}
+
+#reset:hover{
+  transform: scale(1.1);
+  background-color: #eaca1f;
+  box-shadow: 0px 0px 30px grey;
+}
+
+#switch {
+  background-image: url("http://www.iconarchive.com/download/i7902/hopstarter/soft-scraps/Button-Blank-Gray.ico");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  transition: all .4s ease-in-out;
+}
+
+#switch:hover{
+  transform: scale(1.1);
+  background-color: #eaca1f;
+  box-shadow: 0px 0px 30px grey;
+}
+
 p1 {
   font-family: Work Sans;
   font-size: 1em;
@@ -77,7 +115,7 @@ p1 {
 }
 
 .low-usage {
-  background-color: green;
+  background-color: #3e843eb5;
 }
 
 .medium-usage {
