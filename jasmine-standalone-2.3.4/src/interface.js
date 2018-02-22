@@ -16,20 +16,30 @@ $( document ).ready(function() {
 
   $('#reset_button').click(function() {
   thermostat.reset();
+  updateTemperature();
+  updateMode();
   });
 
-  $('#increase_form').submit(function() {
-    var input = $("input").val();
-    console.log(input);
-    thermostat.increase(input);
-    $('#number').text(thermostat.temperature);
-  });
+  $('.increase_form').submit(function(e) {
+    // console.log(e)
+    e.preventDefault();
+    // console.log(e.target.input.value)
+    thermostat.increase(parseInt(e.target.input.value))
+    updateTemperature()
+  })
+
+  $('.decrease_form').submit(function(e) {
+    // console.log(e)
+    e.preventDefault();
+    // console.log(e.target.input.value)
+    thermostat.decrease(parseInt(e.target.input.value))
+    updateTemperature()
+  })
 
   $( "#target" ).submit(function( event ) {
     alert( "Handler for .submit() called." );
     event.preventDefault();
   });
-
 
   function updateTemperature() {
     $('#number').text(thermostat.temperature);
