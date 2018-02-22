@@ -37,6 +37,20 @@
   margin-top: 4em;
 }
 
+.submit_button {
+  background: #b6b6b6;
+  font-family: Work Sans;
+  border-radius: 2em;
+  transition: all .4s ease-in-out;
+}
+
+.submit_button:hover {
+  transform: scale(1.1);
+  background-color: #eaca1f;
+  box-shadow: 0px 0px 30px grey;
+}
+
+
 #increase {
   background-color: #e45f5fad;
   background-image: url("https://png.icons8.com/ios/1600/collapse-arrow.png");
@@ -54,13 +68,11 @@
 }
 
 #number {
-  margin-top: 0.5em;
-  font-size: 2em;
-  letter-spacing: 0.3em;
+  margin-top: 0.8em;
+  font-size: 2.1em;
   text-align: center;
-  background-color: #edebeb !important;
-  width: 20%;
-  margin-left: 40%;
+  width: 100%;
+  font-family: Orbitron;
 }
 
 #mode {
