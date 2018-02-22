@@ -21,6 +21,7 @@ $( document ).ready(function() {
   });
 
   $('.increase_form').submit(function(e) {
+    e.preventDefault();
     // console.log(e.target.input.value)
     thermostat.increase(parseInt(e.target.input.value))
     updateTemperature()
