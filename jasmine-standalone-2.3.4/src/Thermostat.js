@@ -25,7 +25,7 @@ Thermostat.prototype.increase = function(number) {
 }
 
 Thermostat.prototype.increaseByOne = function(){
-  if(this.temperature + 1 < this.currentMax){
+  if(this.temperature + 1 <= this.currentMax){
     this.temperature += 1;
   } else {
     this.maxTemperatureAlert();
