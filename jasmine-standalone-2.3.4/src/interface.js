@@ -28,6 +28,9 @@ $( document ).ready(function() {
 
   $('.city_form').submit(function(e) {
     e.preventDefault();
+    $('html').attr('class', 'normal')
+    $('#message').text('');
+    $('#message2').text('');
     var city = $( ".city" ).val();
     var weather = $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=48e7a56793fa02078630b7e07b5342ad", function(cityTemperature){
     var tempo = cityTemperature.main.temp;
@@ -97,8 +100,9 @@ $( document ).ready(function() {
   }
 
   function displayMessageClouds(clouds) {
-    if( clouds > 80) {
-      $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
+    if( clouds >= 75) {
+      $('#message2').text("is pretty cloudy, it might rain, stay HOME!!!");
+      $('html').attr('class', 'clouds');
     }
   }
 
@@ -108,9 +112,11 @@ $( document ).ready(function() {
     }
     if ((tempo - 273.15) < 0){
       $('#message').text("it's freezing, stay home, make it nice and warm :3");
+      $('html').attr('class', 'freezing')
     }
     if ((tempo - 273.15) > 20){
-      $('#message').text("Turn off the thermostat, save the planet!!!")
+      $('#message').text("Turn off the thermostat, save the planet!!!");
+      $('html').attr('class', 'hot')
     }
   }
 
