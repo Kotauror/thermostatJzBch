@@ -30,19 +30,13 @@ $( document ).ready(function() {
     e.preventDefault();
     var city = $( ".city" ).val();
     var weather = $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=48e7a56793fa02078630b7e07b5342ad", function(cityTemperature){
-    var temp = cityTemperature.main.temp;
+    var tempo = cityTemperature.main.temp;
     var humidity = cityTemperature.main.humidity;
     var clouds = cityTemperature.clouds.all;
-    console.log(clouds);
-    console.log(temp);
-
-
     $('#city').text(city);
     $('#city').prepend("City: ")
-    $('#maxtemp').text(maxtemp);
-    $('#maxtemp').prepend("Maximum temperature: ");
-    $('#mintemp').text(mintemp);
-    $('#mintemp').prepend("Minimum temperature: ");
+    $('#temp').text(Math.floor(tempo - 273.15));
+    $('#temp').prepend("Temperature: ");
     $('#humidity').text(humidity+"%")
     $('#humidity').prepend("Humidity: ");
     $('#clouds').text(clouds+"%")
