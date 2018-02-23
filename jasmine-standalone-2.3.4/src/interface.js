@@ -30,29 +30,31 @@ $( document ).ready(function() {
     e.preventDefault();
     var city = $( ".city" ).val();
     var weather = $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=48e7a56793fa02078630b7e07b5342ad", function(cityTemperature){
-    var maxtemp = cityTemperature.main.temp_max;
-    var mintemp = cityTemperature.main.temp_min;
+    var temp = cityTemperature.main.temp;
     var humidity = cityTemperature.main.humidity;
     var clouds = cityTemperature.clouds.all;
     console.log(clouds);
+    console.log(temp);
+
+
     $('#city').text(city);
     $('#city').prepend("City: ")
-    $('#maxtemp').text(Math.floor(maxtemp / 32));
+    $('#maxtemp').text(maxtemp);
     $('#maxtemp').prepend("Maximum temperature: ");
-    $('#mintemp').text(Math.floor(mintemp / 32));
+    $('#mintemp').text(mintemp);
     $('#mintemp').prepend("Minimum temperature: ");
     $('#humidity').text(humidity+"%")
     $('#humidity').prepend("Humidity: ");
     $('#clouds').text(clouds+"%")
     $('#clouds').prepend("Cloudiness: ");
 
-    if(clouds > 80) {
+    if( clouds > 80) {
       $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
     }
-    if (mintemp < 5){
+    if ((mintemp / 32) < 5){
       $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
     }
-    if (maxtemp > 20){
+    if ((maxtemp / 32) > 20){
       $('#message').text("Turn off the thermostat, save the planet!!!")
     }
     })
