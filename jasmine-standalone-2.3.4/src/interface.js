@@ -36,14 +36,14 @@ $( document ).ready(function() {
     var clouds = cityTemperature.clouds.all;
     $('#city').text(city);
     $('#city').prepend("City: ")
-    $('#maxtemp').text(Math.floor(maxtemp / 32))
+    $('#maxtemp').text(Math.floor(maxtemp / 32));
     $('#maxtemp').prepend("Maximum temperature: ");
-    $('#mintemp').text(Math.floor(mintemp / 32))
+    $('#mintemp').text(Math.floor(mintemp / 32));
     $('#mintemp').prepend("Minimum temperature: ");
     $('#humidity').text(humidity+"%")
     $('#humidity').prepend("Humidity: ");
     $('#clouds').text(clouds+"%")
-    $('#clouds').prepend("Cloudiness: "); 
+    $('#clouds').prepend("Cloudiness: ");
     })
   })
 
