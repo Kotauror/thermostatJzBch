@@ -27,6 +27,7 @@ $( document ).ready(function() {
   });
 
   $('.increase_form').submit(function(e) {
+    console.log(e);
     e.preventDefault();
     var value = $( ".input_form" ).val();
     thermostat.increase(parseInt(value))
@@ -36,6 +37,12 @@ $( document ).ready(function() {
     thermostat.maxTemperatureAlert()
   })
 
+  $('#increase').click(function(){
+    thermostat.increaseByOne();
+    updateTemperature();
+    updateUsage();
+  })
+
   $('.decrease_form').submit(function(e) {
     e.preventDefault();
     thermostat.decrease(parseInt(e.target.temperature.value))
@@ -43,6 +50,12 @@ $( document ).ready(function() {
     updateMode();
     updateUsage();
     thermostat.minTemperatureAlert()
+  })
+
+  $('#decrease').click(function(){
+    thermostat.decreaseByOne();
+    updateTemperature();
+    updateUsage();
   })
 
   $("a").click(function () {

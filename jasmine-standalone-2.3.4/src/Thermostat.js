@@ -24,11 +24,27 @@ Thermostat.prototype.increase = function(number) {
   }
 }
 
+Thermostat.prototype.increaseByOne = function(){
+  if(this.temperature + 1 < this.currentMax){
+    this.temperature += 1;
+  } else {
+    this.maxTemperatureAlert();
+  }
+}
+
 Thermostat.prototype.decrease = function(number) {
   if (this.temperature - number < 10) {
     this.temperature = 10;
   } else {
     this.temperature -= number;
+  }
+}
+
+Thermostat.prototype.decreaseByOne = function(){
+  if(this.temperature - 1 >= 10) {
+    this.temperature -= 1;
+  } else {
+    this.minTemperatureAlert();
   }
 }
 
