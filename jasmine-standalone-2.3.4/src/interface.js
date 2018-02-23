@@ -41,20 +41,8 @@ $( document ).ready(function() {
     $('#humidity').prepend("Humidity: ");
     $('#clouds').text(clouds+"%")
     $('#clouds').prepend("Cloudiness: ");
-
-    if( clouds > 80) {
-      $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
-    }
-    if ((tempo - 273.15) < 5){
-      $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
-    }
-
-    if ((tempo - 273.15) < 0){
-      $('#message').text("it's freezing, stay home, make it nice and warm :3");
-    }
-    if ((tempo - 273.15) > 20){
-      $('#message').text("Turn off the thermostat, save the planet!!!")
-    }
+    displayMessageClouds(clouds);
+    displayMessageTemp(tempo);
     })
 
   })
@@ -108,5 +96,22 @@ $( document ).ready(function() {
     $('#usageinfo').text(thermostat.usage());
   }
 
+  function displayMessageClouds(clouds) {
+    if( clouds > 80) {
+      $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
+    }
+  }
+
+  function displayMessageTemp(tempo) {
+    if ((tempo - 273.15) < 5){
+      $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
+    }
+    if ((tempo - 273.15) < 0){
+      $('#message').text("it's freezing, stay home, make it nice and warm :3");
+    }
+    if ((tempo - 273.15) > 20){
+      $('#message').text("Turn off the thermostat, save the planet!!!")
+    }
+  }
 
 })
