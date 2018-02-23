@@ -45,10 +45,10 @@ $( document ).ready(function() {
     if( clouds > 80) {
       $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
     }
-    if ((mintemp / 32) < 5){
+    if ((tempo - 273.15) < 5){
       $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
     }
-    if ((maxtemp / 32) > 20){
+    if ((tempo - 273.15) > 20){
       $('#message').text("Turn off the thermostat, save the planet!!!")
     }
     })
