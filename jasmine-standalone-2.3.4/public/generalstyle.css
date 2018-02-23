@@ -217,7 +217,10 @@ a:active {
 }
 
 .hot {
-  background-image: url("http://pluspng.com/img-png/png-the-sun-the-sun-the-rays-rays-of-the-sun-nature-morning-sun-732.png");
+  background-image: url("http://clipground.com/images/sun-rays-clipart-png-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .clouds {

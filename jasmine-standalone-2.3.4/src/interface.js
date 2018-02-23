@@ -101,21 +101,21 @@ $( document ).ready(function() {
 
   function displayMessageClouds(clouds) {
     if( clouds >= 75) {
-      $('#message2').text("is pretty cloudy, it might rain, stay HOME!!!");
+      $('#message2').text("Is pretty cloudy, watch out for the rain.");
       $('html').attr('class', 'clouds');
     }
   }
 
   function displayMessageTemp(tempo) {
     if ((tempo - 273.15) < 5){
-      $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
+      $('#message').text("It's cold, you might consider wearing a jumper or increasing your temperature.");
     }
     if ((tempo - 273.15) < 0){
-      $('#message').text("it's freezing, stay home, make it nice and warm :3");
+      $('#message').text("It's freezing outside, at least make your home warm.");
       $('html').attr('class', 'freezing')
     }
     if ((tempo - 273.15) > 20){
-      $('#message').text("Turn off the thermostat, save the planet!!!");
+      $('#message').text("Turn off the thermostat, save the planet!");
       $('html').attr('class', 'hot')
     }
   }
