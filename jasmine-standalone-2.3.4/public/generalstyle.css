@@ -1,11 +1,31 @@
 
 #welcome {
-  margin-top: 2em;
+  margin-top: 3em;
   font-family: Work Sans;
   font-size: 3em;
   width: 80%;
   margin-left: 10%;
   text-align: center;
+}
+
+.enter_weather {
+  width: 20%;
+  margin-left: 45%;
+  margin-top: 2em;
+}
+
+.weather_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0.2em;
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 3em;
+}
+
+.window {
+  background-color: #ecebeb;
 }
 
 .things {
@@ -63,6 +83,7 @@
 
 #increase:hover {
   transform: scale(0.9);
+  box-shadow: 0px 0px 10px grey;
 }
 
 #decrease {
@@ -76,6 +97,7 @@
 
 #decrease:hover {
   transform: scale(0.9);
+  box-shadow: 0px 0px 10px grey;
 }
 
 #number {

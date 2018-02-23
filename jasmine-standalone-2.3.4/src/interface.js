@@ -26,6 +26,27 @@ $( document ).ready(function() {
   updateMode();
   });
 
+  $('.city_form').submit(function(e) {
+    e.preventDefault();
+    var city = $( ".city" ).val();
+    var weather = $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=48e7a56793fa02078630b7e07b5342ad", function(cityTemperature){
+    var maxtemp = cityTemperature.main.temp_max;
+    var mintemp = cityTemperature.main.temp_min;
+    var humidity = cityTemperature.main.humidity;
+    var clouds = cityTemperature.clouds.all;
+    $('#city').text(city);
+    $('#city').prepend("City: ")
+    $('#maxtemp').text(Math.floor(maxtemp / 32))
+    $('#maxtemp').prepend("Maximum temperature: ");
+    $('#mintemp').text(Math.floor(mintemp / 32))
+    $('#mintemp').prepend("Minimum temperature: ");
+    $('#humidity').text(humidity+"%")
+    $('#humidity').prepend("Humidity: ");
+    $('#clouds').text(clouds+"%")
+    $('#clouds').prepend("Cloudiness: "); 
+    })
+  })
+
   $('.increase_form').submit(function(e) {
     console.log(e);
     e.preventDefault();
