@@ -48,6 +48,10 @@ $( document ).ready(function() {
     if ((tempo - 273.15) < 5){
       $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
     }
+
+    if ((tempo - 273.15) < 0){
+      $('#message').text("it's freezing, stay home, make it nice and warm :3");
+    }
     if ((tempo - 273.15) > 20){
       $('#message').text("Turn off the thermostat, save the planet!!!")
     }
