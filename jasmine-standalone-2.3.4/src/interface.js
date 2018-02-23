@@ -34,6 +34,7 @@ $( document ).ready(function() {
     var mintemp = cityTemperature.main.temp_min;
     var humidity = cityTemperature.main.humidity;
     var clouds = cityTemperature.clouds.all;
+    console.log(clouds);
     $('#city').text(city);
     $('#city').prepend("City: ")
     $('#maxtemp').text(Math.floor(maxtemp / 32));
@@ -44,7 +45,18 @@ $( document ).ready(function() {
     $('#humidity').prepend("Humidity: ");
     $('#clouds').text(clouds+"%")
     $('#clouds').prepend("Cloudiness: ");
+
+    if(clouds > 80) {
+      $('#message').text("is pretty cloudy, it might rain, stay HOME!!!");
+    }
+    if (mintemp < 5){
+      $('#message').text("it's cold, you might consider wearing a jumper or increase your temperature");
+    }
+    if (maxtemp > 20){
+      $('#message').text("Turn off the thermostat, save the planet!!!")
+    }
     })
+
   })
 
   $('.increase_form').submit(function(e) {
@@ -95,5 +107,6 @@ $( document ).ready(function() {
   function updateUsage() {
     $('#usageinfo').text(thermostat.usage());
   }
+
 
 })
